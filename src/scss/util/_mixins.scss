@@ -1,0 +1,5 @@
+@use 'functions';
+
+@mixin boxShadow($x, $y, $blur, $spread, $color, $alpha) {
+	box-shadow: rem($x) rem($y) rem($blur) rem($spread) rgba($color, $alpha);
+}
