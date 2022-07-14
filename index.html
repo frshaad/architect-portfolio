@@ -3,23 +3,58 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<!--=============== FAVICON ===============-->
-		<link rel="shortcut icon" href="" type="image/x-icon" />
-
-		<!--=============== BOXICONS ===============-->
-
+		<link rel="shortcut icon" href="./dist/images/favicon.webp" type="image/x-icon" />
+		<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 		<!--=============== SWIPER CSS ===============-->
 		<link rel="stylesheet" href="" />
 
-		<!--=============== CSS ===============-->
-		<link rel="stylesheet" href="" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./dist/style.css" />
+		<script src="./dist/all.js" defer></script>
 
-		<title>Responsive portfolio website Ansel</title>
+		<title>Mahdi Bahmani</title>
 	</head>
 	<body>
-		<!--=============== HEADER ===============-->
-		<header class="header" id="header"></header>
+		<!-- Start of Header -->
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="#" class="nav__logo">Mahdi</a>
+
+				<!-- Start of Navbar Menu -->
+				<div class="nav__menu">
+					<ul class="nav__list">
+						<!-- Start of Navbar Links -->
+						<li class="nav__item">
+							<a href="#home" class="nav__link active-link"><i class="bx bx-home-alt"></i></a>
+						</li>
+						<li class="nav__item">
+							<a href="#about" class="nav__link"><i class="bx bx-user"></i></a>
+						</li>
+						<li class="nav__item">
+							<a href="#skills" class="nav__link"><i class="bx bxs-book"></i></a>
+						</li>
+						<li class="nav__item">
+							<a href="#work" class="nav__link"><i class="bx bxs-briefcase-alt-2"></i></a>
+						</li>
+						<li class="nav__item">
+							<a href="#contact" class="nav__link"><i class="bx bx-message-square-detail"></i></a>
+						</li>
+						<!-- Start of Navbar Links -->
+					</ul>
+				</div>
+				<!-- End of Navbar Menu -->
+
+				<!-- Start of Theme Switch Button -->
+				<i class="bx bx-moon change-theme" id="theme-button"></i>
+				<!-- End of Theme Switch Button -->
+			</nav>
+		</header>
+		<!-- End of Header -->
 
 		<!--=============== MAIN ===============-->
 		<main class="main">
@@ -47,17 +82,5 @@
 
 		<!--=============== FOOTER ===============-->
 		<footer class="footer"></footer>
-
-		<!--=============== SCROLLREVEAL ===============-->
-		<script src=""></script>
-
-		<!--=============== SWIPER JS ===============-->
-		<script src=""></script>
-
-		<!--=============== MIXITUP FILTER ===============-->
-		<script src=""></script>
-
-		<!--=============== MAIN JS ===============-->
-		<script src=""></script>
 	</body>
 </html>
