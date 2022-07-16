@@ -1,0 +1,26 @@
+@use '../util/functions' as *;
+@use '../util/variables' as *;
+@use '../util/breakpoint' as *;
+
+.button {
+	display: inline-block;
+	padding: 0.75rem 1rem;
+
+	border-radius: 0.5rem;
+	background-color: $first-color;
+	color: $body-color;
+	font-size: 1rem;
+	font-weight: $font-medium;
+	transition: 0.4s;
+
+	&:hover {
+		background-color: $first-color-alt;
+		color: $body-color;
+	}
+}
+
+.button--ghost {
+	background-color: transparent;
+	border: rem(2) solid $first-color;
+	color: $first-color;
+}

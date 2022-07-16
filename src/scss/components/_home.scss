@@ -1,0 +1,119 @@
+@use '../util/functions' as *;
+@use '../util/variables' as *;
+@use '../util/breakpoint' as *;
+
+.home__container {
+	position: relative;
+	row-gap: 4.5rem;
+	padding-top: 2rem;
+
+	.home__data {
+		text-align: center;
+
+		.home__greeting,
+		.home__education {
+			font-size: $small-font-size;
+			font-weight: $font-medium;
+		}
+
+		.home__greeting {
+			display: block;
+			color: $title-color;
+			margin-bottom: 0.25rem;
+		}
+
+		// .home__name {
+		font-size: $biggest-font-size;
+		// }
+
+		.home__education {
+			color: $text-color;
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	.home__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.home__handle {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		width: 15rem;
+		height: 20rem;
+		margin: auto;
+
+		overflow: hidden;
+		background: linear-gradient(
+			180deg,
+			hsla($first-hue, $sat, $lig, 1),
+			hsla($first-hue, $sat, $lig, 0.2)
+		);
+		border-radius: 10rem 10rem 1rem 1rem;
+
+		// .home__img {
+		// 	width: rem(160);
+		// }
+	}
+
+	.home__social,
+	.home__scroll {
+		position: absolute;
+	}
+
+	.home__social {
+		bottom: 5rem;
+		left: 0;
+		display: grid;
+		row-gap: 0.5rem;
+
+		&::after {
+			content: '';
+			width: rem(32);
+			height: rem(2);
+
+			background-color: $first-color;
+			transform: rotate(90deg) translate(rem(16), rem(3));
+		}
+
+		&-link {
+			display: flex;
+			width: max-content;
+			padding: 0.25rem;
+
+			background-color: $container-color;
+			color: $first-color;
+			border-radius: 0.25rem;
+			font-size: 1rem;
+			transition: 0.4s;
+
+			&:hover {
+				background-color: $first-color;
+				color: #fff;
+			}
+		}
+	}
+
+	.home__scroll {
+		right: -1.5rem;
+		bottom: 4rem;
+		display: grid;
+		row-gap: 2.25rem;
+		justify-items: center;
+
+		color: $first-color;
+
+		&-icon {
+			font-size: 1.25rem;
+		}
+
+		&-name {
+			font-size: $small-font-size;
+			transform: rotate(-90deg);
+		}
+	}
+}

@@ -1,0 +1,51 @@
+@use '../util/functions' as *;
+@use '../util/variables' as *;
+@use '../util/breakpoint' as *;
+
+.about__container {
+	row-gap: 2.5rem;
+
+	.about__img {
+		width: rem(250);
+
+		justify-self: center;
+		border-radius: 1.5rem;
+	}
+
+	.about__data {
+		text-align: center;
+
+		.about__info {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.5rem;
+			margin-bottom: 2rem;
+
+			.about__box {
+				padding: 1rem 0.5rem;
+
+				background-color: $container-color;
+				border-radius: 0.75rem;
+
+				.about__icon {
+					margin-bottom: 0.5rem;
+
+					font-size: 1.5rem;
+					color: $first-color;
+				}
+
+				.about__title {
+					font-size: $small-font-size;
+				}
+
+				.about__subtitle {
+					font-size: $tiny-font-size;
+				}
+			}
+		}
+
+    .about__description{
+      margin-bottom: 2rem;
+    }
+	}
+}

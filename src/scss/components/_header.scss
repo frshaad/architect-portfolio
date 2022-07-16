@@ -66,4 +66,8 @@
 
 		box-shadow: 0 0 rem(16) hsla($first-hue, $sat, $lig, 0.4);
 	}
+	
+	.scroll-header {
+		box-shadow: 0 rem(4) rem(4) hsla(0, 0%, 4%, 0.3);
+	}
 }
