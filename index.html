@@ -4,9 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="./dist/images/favicon.webp" type="image/x-icon" />
+
 		<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-		<!--=============== SWIPER CSS ===============-->
-		<link rel="stylesheet" href="" />
+
+		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +16,9 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./dist/style.css" />
-		<script src="./dist/all.js" defer></script>
+		<script src="./dist/mixitup.min.js" defer></script>
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+		<script type="module" src="./dist/main.js" defer></script>
 
 		<title>Mahdi Bahmani</title>
 	</head>
@@ -366,11 +369,87 @@
 				</div>
 			</section>
 
-			<!--=============== TESTIMONIALS ===============-->
-			<section class="testimonial section"></section>
+			<!-- Testimonial -->
+			<section class="testimonial section">
+				<span class="section__subtitle">My clients say</span>
+				<h2 class="section__title">Testimonial</h2>
 
-			<!--=============== CONTACT ===============-->
-			<section class="contact section" id="contact"></section>
+				<div class="testimonial__container container grid swiper">
+					<div class="swiper-wrapper">
+						<div class="testimonial__card swiper-slide">
+							<img src="./dist/images/testimonial1.webp" alt="" class="testimonial__img" />
+							<h3 class="testimonial__name">John Doe</h3>
+							<p class="testimonial__description">
+								A really good job, all aspects of the project were followed step by step and with
+								good results.
+							</p>
+						</div>
+
+						<div class="testimonial__card swiper-slide">
+							<img src="./dist/images/testimonial2.webp" alt="" class="testimonial__img" />
+							<h3 class="testimonial__name">Paula Vusy</h3>
+							<p class="testimonial__description">
+								A really good job, all aspects of the project were followed step by step and with
+								good results.
+							</p>
+						</div>
+
+						<div class="testimonial__card swiper-slide">
+							<img src="./dist/images/testimonial3.webp" alt="" class="testimonial__img" />
+							<h3 class="testimonial__name">Sara Cill</h3>
+							<p class="testimonial__description">
+								A really good job, all aspects of the project were followed step by step and with
+								good results.
+							</p>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+
+			<!-- Contact -->
+			<section class="contact section" id="contact">
+				<span class="section__subtitle">Get in touch</span>
+				<h2 class="section__title">Contact Me</h2>
+
+				<div class="contact__container container grid">
+					<div class="contact__content">
+						<h3 class="contact__title">Talk to me</h3>
+						<div class="contact__info">
+							<div class="contact__card">
+								<i class="bx bx-mail-send contact__card-icon"></i>
+								<h3 class="contact__card-title">Email</h3>
+								<span class="contact__card-data">mahdibahmani@outlook.com</span>
+								<a href="" target="_blank" class="contact__button">
+									Mail me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+								</a>
+							</div>
+							
+							<div class="contact__card">
+								<i class="bx bx-mail-send contact__card-icon"></i>
+								<h3 class="contact__card-title">Email</h3>
+								<span class="contact__card-data">mahdibahmani@outlook.com</span>
+								<a href="" target="_blank" class="contact__button">
+									Mail me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+								</a>
+							</div>
+
+							<div class="contact__card">
+								<i class="bx bx-mail-send contact__card-icon"></i>
+								<h3 class="contact__card-title">Email</h3>
+								<span class="contact__card-data">mahdibahmani@outlook.com</span>
+								<a href="" target="_blank" class="contact__button">
+									Mail me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="contact__content">
+						<h3 class="contact__title">Write me your project</h3>
+					</div>
+				</div>
+			</section>
 		</main>
 		<!-- End of Main -->
 

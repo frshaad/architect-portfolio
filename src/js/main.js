@@ -45,5 +45,40 @@ let mixerPortfolio = mixitup('.work__container', {
 	},
 });
 
+// Link active work
+const linkWork = document.querySelectorAll('.work__item');
+
+function activeWork() {
+	linkWork.forEach(link => link.classList.remove('active-work'));
+	this.classList.add('active-work');
+}
+
+linkWork.forEach(link => link.addEventListener('click', activeWork));
+
 // Work MixItUp
+// **************
+
+// **************
+// Swiper Testimonial
+
+let swiperTestimonial = new Swiper('.testimonial__container', {
+	spaceBetween: 24,
+	loop: true,
+	grabCursor: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	breakpoints: {
+		576: {
+			slidesPerView: 2,
+		},
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 48,
+		},
+	},
+});
+
+// Swiper Testimonial
 // **************

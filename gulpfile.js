@@ -20,7 +20,12 @@ function scssTask() {
 }
 
 function jsTask() {
-	return src('src/js/**/*.js').pipe(concat('all.js')).pipe(terser()).pipe(dest('dist'));
+	return (
+		src('src/js/**/*.js')
+			// .pipe(concat('all.js'))
+			.pipe(terser())
+			.pipe(dest('dist'))
+	);
 }
 
 function svgCopy() {
