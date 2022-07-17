@@ -1,3 +1,56 @@
 @use '../util/functions' as *;
 @use '../util/variables' as *;
 @use '../util/breakpoint' as *;
+
+.skills__container {
+	row-gap: 2rem;
+	padding-top: 1rem;
+}
+
+.skills__content {
+	padding: 1.5rem;
+
+	border-radius: 1.25rem;
+	background-color: $container-color;
+}
+
+.skills__title {
+	margin-bottom: 1.5rem;
+
+	font-size: $normal-font-size;
+	font-weight: $font-medium;
+	color: $first-color;
+	text-align: center;
+}
+
+.skills__box {
+	display: flex;
+	justify-content: center;
+	column-gap: 4.5rem;
+}
+
+.skills__group {
+	display: grid;
+	align-content: flex-start;
+	row-gap: 1rem;
+}
+
+.skills__data {
+	display: flex;
+	column-gap: 0.5rem;
+}
+
+.skills .bxs-badge-check {
+	font-size: 1rem;
+	color: $first-color;
+}
+
+.skills__name {
+	font-size: $normal-font-size;
+	font-weight: $font-medium;
+	line-height: rem(18);
+}
+
+.skills__level {
+	font-size: $tiny-font-size;
+}

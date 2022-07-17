@@ -1,0 +1,79 @@
+@use '../util/functions' as *;
+@use '../util/variables' as *;
+@use '../util/breakpoint' as *;
+
+.services__modal {
+	position: fixed;
+	inset: 0;
+	padding: 2rem 1rem;
+	display: grid;
+	place-items: center;
+
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.4s;
+	z-index: $z-modal;
+	background-color: hsla($second-hue, 28%, 16%, 0.7);
+}
+
+.services__modal-content {
+	position: relative;
+	padding: 4.5rem 1.5rem 2.5rem;
+
+	background-color: $body-color;
+	border-radius: 1.5rem;
+}
+
+.services__modal-title,
+.services__modal-descrition {
+	text-align: center;
+}
+
+.services__modal-title {
+	margin-bottom: 1rem;
+
+	font-size: $h3-font-size;
+	color: $first-color;
+}
+
+.services__modal-description {
+	margin-bottom: 2rem;
+
+	font-size: $small-font-size;
+}
+
+.services__modal-list {
+	display: grid;
+	row-gap: 0.75rem;
+}
+
+.services__modal-item {
+	display: flex;
+	align-items: flex-start;
+	column-gap: 0.5rem;
+}
+
+.services__modal-icon {
+	font-size: 1.5rem;
+	color: $first-color;
+}
+
+.services__modal-info {
+	font-size: $small-font-size;
+}
+
+.services__modal-close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+
+	font-size: 1.5rem;
+	color: $first-color;
+	cursor: pointer;
+}
+
+// Active modal
+.active-modal {
+	opacity: 1;
+	visibility: visible;
+}
