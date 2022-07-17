@@ -1,0 +1,70 @@
+@use '../util/functions' as *;
+@use '../util/variables' as *;
+@use '../util/breakpoint' as *;
+
+.contact__container {
+	row-gap: 3rem;
+	padding-bottom: 3rem;
+}
+
+.contact__content {
+	.contact__title {
+		margin-bottom: 1.5rem;
+
+		font-size: $h3-font-size;
+		text-align: center;
+	}
+
+	.contact__info {
+		display: grid;
+		gap: 1rem;
+
+		.contact__card {
+			padding: 1rem;
+
+			background-color: $container-color;
+			border-radius: 0.75rem;
+			text-align: center;
+
+			&-icon {
+				margin-bottom: 0.25rem;
+
+				font-size: 2rem;
+				color: $title-color;
+			}
+
+			&-title,
+			&-data {
+				font-size: $small-font-size;
+			}
+
+			&-title {
+				font-weight: $font-medium;
+			}
+
+			&-data {
+				display: block;
+				margin-bottom: 0.75rem;
+			}
+
+			.contact__button {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				column-gap: 0.25rem;
+
+				color: $first-color;
+				font-size: $small-font-size;
+
+				&-icon {
+					font-size: 1rem;
+					transition: 0.4s;
+				}
+
+				&:hover .contact__button-icon {
+					transform: translateX(0.25rem);
+				}
+			}
+		}
+	}
+}
