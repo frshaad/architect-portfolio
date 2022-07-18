@@ -12,7 +12,10 @@
 
 .footer__title,
 .footer__link {
+	padding: 1rem 0;
+
 	color: $body-color;
+	text-align: center;
 }
 
 .footer__list {
