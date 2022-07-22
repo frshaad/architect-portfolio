@@ -1,9 +1,7 @@
 @forward './util/variables';
 @forward 'util/functions';
-@forward 'util/mixins';
 @forward 'util/globals';
 @forward 'util/breakpoint';
-@forward 'util/tagNames';
 
 @forward './components/header';
 @forward './components/home';
