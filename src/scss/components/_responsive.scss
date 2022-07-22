@@ -1,0 +1,116 @@
+@use '../util/functions' as *;
+@use '../util/variables' as *;
+@use '../util/breakpoint' as *;
+
+@media screen and (max-width: 575px) {
+	.nav__menu {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.nav__menu {
+		max-width: rem(450);
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.about__info {
+		grid-template-columns: repeat(3, rem(140));
+		justify-content: center;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	.about__description {
+		padding: 0 5rem;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
+	.skills__container {
+		justify-content: center;
+	}
+
+	.skills__content {
+		padding: 2rem 4rem;
+	}
+
+	.services__container {
+		grid-template-columns: repeat(2, rem(160));
+		justify-content: center;
+	}
+
+	.services__modal-content {
+		width: rem(500);
+	}
+
+	.work__container {
+		max-width: 80%;
+		grid-template-columns: repeat(2, 1fr);
+		place-items: center;
+		margin: 0 auto;
+	}
+
+	.work__card {
+		justify-content: center;
+		max-width: rem(300);
+	}
+
+	.work__item {
+		justify-content: center;
+	}
+
+	.work__img {
+		width: rem(300);
+	}
+
+	.testimonial__container {
+		overflow: visible;
+	}
+
+	.swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-bullets.swiper-pagination-horizontal,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: rem(-30);
+	}
+
+	.contact__info {
+		max-width: 50%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.nav__menu {
+		max-width: rem(500);
+	}
+
+	.container.grid {
+		margin: 0 auto;
+	}
+
+	.work__container {
+		grid-template-columns: repeat(3, 1fr);
+		place-items: center;
+		max-width: 55%;
+	}
+
+	.testimonial__container {
+		overflow: hidden;
+	}
+
+	.swiper-horizontal > .swiper-pagination-bullets,
+	.swiper-pagination-bullets.swiper-pagination-horizontal,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: rem(10);
+	}
+
+	.testimonial__container.container.grid.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden {
+		max-width: 90%;
+	}
+}

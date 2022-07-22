@@ -35,17 +35,17 @@
 				}
 
 				.about__title {
-					font-size: $small-font-size;
+					font-size: $normal-font-size;
 				}
 
 				.about__subtitle {
-					font-size: $tiny-font-size;
+					font-size: $small-font-size;
 				}
 			}
 		}
 
-    .about__description{
-      margin-bottom: 2rem;
-    }
+		.about__description {
+			margin-bottom: 2rem;
+		}
 	}
 }
