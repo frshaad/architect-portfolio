@@ -33,7 +33,7 @@ function svgCopy() {
 }
 
 function imgTask() {
-	return src('src/images/**/*.{jpg,png}')
+	return src('src/images/**/*.{jpg,png,jpeg}')
 		.pipe(
 			imagemin([
 				imagemin.mozjpeg({ quality: 80, progressive: true }),
@@ -44,7 +44,9 @@ function imgTask() {
 }
 
 function webpTask() {
-	return src('dist/images/optimized/*.{jpg,png}').pipe(imagewebp()).pipe(dest('dist/images'));
+	return src('dist/images/optimized/**/*.{jpg,png,jpeg}')
+		.pipe(imagewebp())
+		.pipe(dest('dist/images'));
 }
 
 function browsersyncServe(cb) {

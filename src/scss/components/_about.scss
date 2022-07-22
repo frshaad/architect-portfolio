@@ -46,6 +46,11 @@
 
 		.about__description {
 			margin-bottom: 2rem;
+
+			&-link {
+				text-decoration: none;
+				color: $first-color;
+			}
 		}
 	}
 }
