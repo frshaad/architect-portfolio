@@ -1,0 +1,59 @@
+@use '../util/functions' as *;
+@use '../util/variables' as *;
+@use '../util/breakpoint' as *;
+
+.gallery__modal {
+	position: fixed;
+	inset: 0;
+	padding: 4rem 1rem;
+	display: grid;
+	place-items: center;
+
+	overflow: scroll;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.4s;
+	z-index: $z-modal;
+	background-color: hsla($second-hue, 28%, 16%, 0.7);
+}
+
+.gallery__modal-content {
+	position: relative;
+	padding: 4.5rem 1.5rem 2.5rem;
+
+	background-color: $body-color;
+	border-radius: 1.5rem;
+}
+
+.gallery__modal-img {
+	max-width: 100%;
+
+	border-radius: 0.25rem;
+}
+
+.gallery__modal-descrition {
+	text-align: center;
+}
+
+.gallery__modal-description {
+	margin-bottom: 2rem;
+
+	text-align: center;
+	font-size: $small-font-size;
+}
+
+.gallery__modal-close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+
+	font-size: 1.5rem;
+	color: $first-color;
+	cursor: pointer;
+}
+
+// Active modal
+.active-modal {
+	opacity: 1;
+	visibility: visible;
+}

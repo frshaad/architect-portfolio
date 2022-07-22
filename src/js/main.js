@@ -33,6 +33,32 @@ modalClose.forEach(modalClose => {
 // **************
 
 // **************
+// Gallery Modal
+const galleryViews = document.querySelectorAll('.gallery__modal');
+const galleryBtns = document.querySelectorAll('.work__button');
+const galleryClose = document.querySelectorAll('.gallery__modal-close');
+
+let galleryModal = function (modalClick) {
+	galleryViews[modalClick].classList.add('active-modal');
+};
+
+galleryBtns.forEach((galleryBtn, i) => {
+	galleryBtn.addEventListener('click', () => {
+		galleryModal(i);
+	});
+});
+
+galleryClose.forEach(galleryClose => {
+	galleryClose.addEventListener('click', () => {
+		galleryViews.forEach(modalView => {
+			modalView.classList.remove('active-modal');
+		});
+	});
+});
+// Gallery Modal
+// **************
+
+// **************
 // Work MixItUp
 
 let mixerPortfolio = mixitup('.work__container', {
