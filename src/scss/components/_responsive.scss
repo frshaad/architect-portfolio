@@ -7,6 +7,14 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
+
+	.skills__group {
+		width: rem(100);
+	}
+
+	.work__filters {
+		column-gap: 0;
+	}
 }
 
 @media screen and (min-width: 576px) {
@@ -36,6 +44,7 @@
 
 	.skills__content {
 		padding: 2rem 4rem;
+		padding-bottom: 1rem;
 	}
 
 	.services__container {

@@ -31,6 +31,7 @@
 
 .skills__group {
 	display: grid;
+	width: rem(150);
 	align-content: flex-start;
 	row-gap: 1rem;
 }
@@ -53,4 +54,29 @@
 
 .skills__level {
 	font-size: $tiny-font-size;
+}
+
+.skills__more {
+	padding-top: 1.5rem;
+
+	font-size: 0.75rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.skills__more-icon {
+	display: block;
+
+	text-align: center;
+	cursor: pointer;
+}
+
+.up-icon {
+	display: none;
+}
+
+// Hidden skills
+
+.hidden-item {
+	display: none;
 }
