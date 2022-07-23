@@ -1,16 +1,9 @@
-// const scrollHeader = () => {
-// 	const header = document.getElementById('header');
-// 	this.scrollY >= 50
-// 		? header.classList.add('scroll-header')
-// 		: header.classList.remove('scroll-header');
-// };
-// window.addEventListener('scroll', scrollHeader);
-
 // **************
 // Services Modal
 const modalViews = document.querySelectorAll('.services__modal');
 const modalBtns = document.querySelectorAll('.services__button');
 const modalClose = document.querySelectorAll('.services__modal-close');
+const modalContents = document.querySelectorAll('.services__modal-content');
 
 let modal = function (modalClick) {
 	modalViews[modalClick].classList.add('active-modal');
@@ -29,6 +22,20 @@ modalClose.forEach(modalClose => {
 		});
 	});
 });
+
+window.onclick = function (event) {
+	modalViews.forEach(modalView => {
+		if (event.target == modalView) {
+			modalView.classList.remove('active-modal');
+		}
+	});
+	galleryViews.forEach(galleryView => {
+		if (event.target == galleryView) {
+			galleryView.classList.remove('active-modal');
+		}
+	});
+};
+
 // Services Modal
 // **************
 
@@ -50,11 +57,12 @@ galleryBtns.forEach((galleryBtn, i) => {
 
 galleryClose.forEach(galleryClose => {
 	galleryClose.addEventListener('click', () => {
-		galleryViews.forEach(modalView => {
-			modalView.classList.remove('active-modal');
+		galleryViews.forEach(galleryView => {
+			galleryView.classList.remove('active-modal');
 		});
 	});
 });
+
 // Gallery Modal
 // **************
 
@@ -150,3 +158,27 @@ sr.reveal(`.home__social, .home__scroll`, { delay: 900, origin: 'bottom' });
 
 // Scroll Reveal Animation
 // **************
+
+// **************
+// See more skills
+
+const moreBtn = document.querySelector('.skills__more');
+const arrowBtn = document.querySelector('.skills__more-icon');
+const moreItems = document.querySelectorAll('.skills__data.more-item');
+const upArrow = document.querySelector('.up-icon');
+const downArrow = document.querySelector('.down-icon');
+
+moreBtn.addEventListener('click', () => {
+	moreItems.forEach(item => {
+		item.classList.toggle('hidden-item');
+		if (!item.classList.contains('hidden-item')) {
+			moreBtn.innerHTML = 'See less';
+			upArrow.style.display = 'block';
+			downArrow.style.display = 'none';
+		} else {
+			moreBtn.innerHTML = 'See more';
+			upArrow.style.display = 'none';
+			downArrow.style.display = 'block';
+		}
+	});
+});

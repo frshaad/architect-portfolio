@@ -33,18 +33,18 @@ function svgCopy() {
 }
 
 function imgTask() {
-	return src('src/images/**/*.{jpg,png,jpeg}')
+	return src('src/images/**/*.{jpg,png,jpeg,webp}')
 		.pipe(
 			imagemin([
 				imagemin.mozjpeg({ quality: 80, progressive: true }),
 				imagemin.optipng({ optimizationLevel: 2 }),
 			])
 		)
-		.pipe(dest('dist/images/optimized'));
+		.pipe(dest('src/images/optimized'));
 }
 
 function webpTask() {
-	return src('dist/images/optimized/**/*.{jpg,png,jpeg}')
+	return src('src/images/optimized/**/*.{jpg,png,jpeg}')
 		.pipe(imagewebp())
 		.pipe(dest('dist/images'));
 }
